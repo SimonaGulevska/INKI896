@@ -3,7 +3,6 @@
 #include<algorithm>
 #include<fstream>
 using namespace std;
-//definiranje na stuktura
 struct Covek
 {
 	int CovekRedenBRoj;
@@ -11,20 +10,16 @@ struct Covek
 	float CovekPoeni;
  	
 };
-//deklaracija na funkcii
 void FunkVnesCovek(struct Covek covek[],int n);
 bool Sortiranje(const Covek &c1,const Covek &c2);
 int main()
 {
-	//kreiranje na instanca
 	struct Covek covek[100];
-	//deklariranje na vektor
 	vector<struct Covek> vekCovek(100);
 	
 	int n;
 	cout<<"\n VNESETE BROJ  ";
 	cin>>n;
-	//povik na funkicjata za vnes na podatoci
 	FunkVnesCovek(covek,n);
 	//dodeluvanje na niza od struktura vo vektor
 	for(int i=0;i<n;i++)
