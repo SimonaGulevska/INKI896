@@ -21,12 +21,9 @@ int main()
 	cout<<"\n VNESETE BROJ  ";
 	cin>>n;
 	FunkVnesCovek(covek,n);
-	//dodeluvanje na niza od struktura vo vektor
 	for(int i=0;i<n;i++)
 		vekCovek.push_back(covek[i]);
-	//povik na metoda sortiranje
 	sort(vekCovek.begin(),vekCovek.end(),Sortiranje);
-	//prikaz na podatoci sortirani
 	cout<<"\n ....................................................";
 	cout<<"\n Podatocite sortirani po poeni ";
 	cout<<"\n ....................................................";
@@ -38,8 +35,7 @@ int main()
 			cout<<"\t"<<itr->CovekRedenBRoj<<"  "<<itr->CovekIme<<"  "<<itr->CovekPoeni;
 		}
 	}
-	//zapisuvanje na podatocite vo datoteka
-	ofstream DatotekaTeona("INKI611.Milica.txt");
+	ofstream DatotekaTeona("INKI896.TeonaBojoska.txt");
 	DatotekaTeona<<"\n ....................................................";
 	DatotekaTeona<<"Podatocite sortirani po poeni ";
 	DatotekaTeona<<"\n ....................................................";
@@ -53,7 +49,6 @@ int main()
 	}
 	DatotekaTeona.close();
 }
-//definicija za vnesuvanje na podatoci vo niza od struktura
 void FunkVnesCovek(struct Covek covek[],int n)
 {
 	for(int i=0;i<n;i++)
@@ -66,7 +61,6 @@ void FunkVnesCovek(struct Covek covek[],int n)
 		cin>>covek[i].CovekPoeni;
 	}
 }
-//definiranje na metoda za sortiranje po broj na poeni
 bool Sortiranje(const Covek &c1,const Covek &c2){
  		return c1.CovekPoeni>c2.CovekPoeni;
 	 }
